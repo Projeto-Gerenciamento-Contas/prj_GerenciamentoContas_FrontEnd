@@ -1,0 +1,30 @@
+nav{
+    
+    
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    background-color: blue;
+    /* Rectangle 118 */
+
+
+
+height: 90px;
+
+
+background: #99A6E8;
+
+    
+   
+}
+a{
+    color: black;
+    font-size: 30px;
+}
+a:hover{
+    background-color: black;
+    color: wheat;
+    
+}
