@@ -9,22 +9,26 @@ const Home = () => {
       <div>
         <img src={LogoB} alt="" />
         <h1>TetoFinanças</h1>
+        <p><br/>
+        
+        </p>
+        <div>Sobre TetoFinanças </div>
+      <p>
+      Essa aplicação serve para serve para facilitar a economia domestica de uma ou mais residencias, organizando os gastos em diferentes categorias,
+como aparelhos, produtos gastos, etc
+      </p>
 
 
       </div>
       <div>
         <div >
-        <Link to ="/Login"><button type='button'on>Logar</button></Link>
+        <Link to ="/Login"><button type='button'>Logar</button></Link>
         </div>
         <div>
-        <Link to ="/Cadastro"><button type='button'on>Casdastrar</button></Link>
+        <Link to ="/Cadastro"><button type='button'onClick={"/Cadastro"}>Casdastrar</button></Link>
         </div>
       </div>
-      <div>Sobre TetoFinanças </div>
-      <p>
-      Essa aplicação serve para serve para facilitar a economia domestica de uma ou mais residencias, organizando os gastos em diferentes categorias,
-como aparelhos, produtos gastos, etc
-      </p>
+     
       </section>
     </main>
   )

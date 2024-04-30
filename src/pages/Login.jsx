@@ -1,6 +1,7 @@
 import React from 'react'
 import './Form.css'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 const Login = () => {
     const [login, setLogin] = useState("")
     const [key, setKey] = useState("")
@@ -17,9 +18,9 @@ const Login = () => {
     return (
         <main>
             <section>
-                <div>Formulário</div>
+                <div></div>
                 <p>
-                    Esta página criada na aula de Laboratório de Desenvolvimento Web utiliza formulário.
+                    
                 </p>
             </section>
             <div>
@@ -39,7 +40,8 @@ const Login = () => {
                             onChange={(e) => setKey(e.target.value)} value={key} />
                     </label><p> <br /> </p>
                     
-                    <button type='submit'>Entrar</button>
+                    <Link to ="/Menu"><button type='submit'onClick={"/Menu"}>Entrar</button></Link>
+                
                     
                 </form>
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import './Cadastro.css'
 import { useState } from 'react'
+import {Link} from 'react-router-dom'
 const Cadastro = () => {
     const [nome, setName] = useState("")
     const [email, setEmail] = useState("")
@@ -22,9 +23,9 @@ const Cadastro = () => {
     return (
         <main>
             <section>
-                <div>Formulário</div>
+                <div>Formulário de Cadastro</div>
                 <p>
-                    Esta página criada na aula de Laboratório de Desenvolvimento Web utiliza formulário.
+                    
                 </p>
             </section>
             <div>
@@ -42,9 +43,9 @@ const Cadastro = () => {
                             onChange={(e) => setEmail(e.target.value)} value={email} />
                     </label><p> <br /> </p>
                     <label>
-                        <span>E-Mail</span>
+                        <span>Data de nascimento</span>
                         <input type='date' name='data' id='data' placeholder='dd/mm/aaaa'
-                            onChange={(e) => setEmail(e.target.value)} value={data} />
+                            onChange={(e) => setData(e.target.value)} value={data} />
                     </label><p> <br /> </p>
                     
                     <label>
@@ -58,7 +59,7 @@ const Cadastro = () => {
                         <input type='password' name='key' id='key' placeholder='*********'
                             onChange={(e) => setKey(e.target.value)} value={Ckey} />
                     </label><p> <br /> </p>
-                    <button type='submit'>Enviar</button>
+                    <Link to ="/Menu"><button type='submit'onClick={"/Cadastro"}>Enviar</button></Link>
                 </form>
 
             </div>

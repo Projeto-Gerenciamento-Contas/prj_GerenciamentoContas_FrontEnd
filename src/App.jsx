@@ -12,6 +12,7 @@ import Page3 from './pages/Pagina3'
 import Form from './pages/Form'
 import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
+import Menu from './pages/Menu'
 
 function App() {
 
@@ -40,8 +41,9 @@ function App() {
       </div>
  */}
       <BrowserRouter>
-        <Header />
-       {/*  <NavBar /> */}
+{/*         <Header />
+ */}        <NavBar /> 
+ 
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/pagina2' element={<Page2 />} />
@@ -49,8 +51,10 @@ function App() {
           <Route path='/Form' element={<Form />} />
           <Route path='/Login' element={<Login />} />          
           <Route path='/Cadastro' element={<Cadastro />} />
+          <Route path='/Menu' element={<Menu />} />
         </Routes>
-        <Footer />        
+        <Footer /> 
+            
       </BrowserRouter>  
       
     </>
