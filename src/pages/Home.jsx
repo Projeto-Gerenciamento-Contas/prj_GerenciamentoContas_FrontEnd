@@ -7,8 +7,8 @@ const Home = () => {
     <main>
       <section>
       <div>
-        <img src={LogoB} alt="" />
-        <h1>TetoFinanças</h1>
+        <img src={LogoB} alt="Logo" />
+        <h1>Teto<span>Finanças</span></h1>
         <p><br/>
         
         </p>
@@ -25,7 +25,7 @@ como aparelhos, produtos gastos, etc
         <Link to ="/Login"><button type='button'>Logar</button></Link>
         </div>
         <div>
-        <Link to ="/Cadastro"><button type='button'onClick={"/Cadastro"}>Casdastrar</button></Link>
+        <Link to ="/cadastro"><button type='button'>Casdastrar</button></Link>
         </div>
       </div>
      

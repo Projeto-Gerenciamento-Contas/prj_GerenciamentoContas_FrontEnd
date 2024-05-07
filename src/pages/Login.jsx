@@ -40,7 +40,7 @@ const Login = () => {
                             onChange={(e) => setKey(e.target.value)} value={key} />
                     </label><p> <br /> </p>
                     
-                    <Link to ="/Menu"><button type='submit'onClick={"/Menu"}>Entrar</button></Link>
+                    <Link to ="/Menu"><button type='button'>Entrar</button></Link>
                 
                     
                 </form>

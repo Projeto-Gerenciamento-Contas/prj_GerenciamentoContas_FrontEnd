@@ -23,10 +23,11 @@ const Cadastro = () => {
     return (
         <main>
             <section>
-                <div>Formulário de Cadastro</div>
-                <p>
-                    
-                </p>
+                <div>
+                    <p>
+                        Formulário de Cadastro
+                    </p>
+                </div>
             </section>
             <div>
                 <form onSubmit={handleSubmit}>
@@ -59,7 +60,7 @@ const Cadastro = () => {
                         <input type='password' name='key' id='key' placeholder='*********'
                             onChange={(e) => setKey(e.target.value)} value={Ckey} />
                     </label><p> <br /> </p>
-                    <Link to ="/Menu"><button type='submit'onClick={"/Cadastro"}>Enviar</button></Link>
+                    <Link to ="/Menu"><button type='button'>Enviar</button></Link>
                 </form>
 
             </div>
