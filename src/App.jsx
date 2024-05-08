@@ -3,14 +3,14 @@
 //import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import NavBar from './components/NavBar'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import Form from './pages/Form'
-import Login from './pages/Login'
-import Cadastro from './pages/Cadastro'
-import Menu from './pages/Menu'
+import Header from './components/Header/Header'
+import NavBar from './components/Navbar/NavBar'
+import Footer from './components/Footer/Footer'
+import Home from './pages/Home/Home'
+import Form from './pages/Form/Form'
+import Login from './pages/Login/Login'
+import Cadastro from './pages/Cadastro/Cadastro'
+import Menu from './pages/Menu/Menu'
 
 function App() {
 
