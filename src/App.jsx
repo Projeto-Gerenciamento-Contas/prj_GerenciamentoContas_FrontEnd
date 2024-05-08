@@ -11,6 +11,7 @@ import Form from './pages/Form/Form'
 import Login from './pages/Login/Login'
 import Cadastro from './pages/Cadastro/Cadastro'
 import Menu from './pages/Menu/Menu'
+import Acessibilidade from './components/Acessibilidade/Acessibilidade'
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
       <BrowserRouter>
 {         
  }        <NavBar /> 
- 
+ <Acessibilidade/>
         <Routes>
           <Route path='/' element={<Home />} />
           
