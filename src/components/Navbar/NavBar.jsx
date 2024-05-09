@@ -12,7 +12,7 @@ const NavBar = () => {
     <nav>
       <Link to="/"><img src={logo} alt="logo" /></Link>
       <div className='navSobre'></div>
-      <div className='logado hide'>
+      <div className='logado '>
         <div className='simbolos'>
           <img src={alerta} alt="alerta" />
           <img src={config} alt="onfigurações" />
@@ -27,7 +27,7 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className='noCadastro '>
+      <div className='noCadastro hide'>
 
         <Link to="/Login"><button type='button'>Logar</button></Link>
         <Link to="/cadastro"><button type='button'>Casdastrar</button></Link>
