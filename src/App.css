@@ -6,8 +6,6 @@
   --pal5:#058ED9;
   --pal6:#E9EE1E;
 
-  width: 100vw;
-  height: 100vh;
 }
 * {
   margin: 0;
@@ -17,12 +15,24 @@
 
 
 }
+h1{
+  /* TetoFinanças */
 
+font-family: 'Secular One';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 60px;
+text-decoration: none;
+color: #5075BF;
+
+
+}
 
 
 main {
   margin: 0;
-  min-height: 100vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   background-color: white;
