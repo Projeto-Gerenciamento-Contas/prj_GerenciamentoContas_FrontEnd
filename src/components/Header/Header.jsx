@@ -8,15 +8,8 @@ const header = () => {
     return (
         <header>
             <nav>
-                
-                
-                
-                
-
-            
             </nav>
         </header>
-      
     )
 }
 
