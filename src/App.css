@@ -24,7 +24,7 @@ font-weight: 400;
 font-size: 40px;
 line-height: 60px;
 text-decoration: none;
-color: #5075BF;
+color: var(--pal1);
 
 
 }
@@ -32,7 +32,7 @@ color: #5075BF;
 
 main {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
   background-color: white;
