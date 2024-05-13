@@ -1,17 +1,22 @@
 import React from 'react'
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import 'bootstrap/dist/css/bootstrap.min.css';
+export default function Aside() {
+  const [show, setShow] = useState(false);
 
-export const Aside = () => {
-    
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
    <>
-  <aside >
-   <ul>
-    <li>Endereços</li>
-    <li></li>
-    <li></li>
-    <li></li>
-   </ul>
-  </aside>
+<Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          Some text as placeholder. In real life you can have the elements you
+          have chosen. Like, text, images, lists, etc.
+        </Offcanvas.Body>
+      </Offcanvas>
    </>
   )
 }
