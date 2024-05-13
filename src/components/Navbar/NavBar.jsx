@@ -8,8 +8,13 @@ import user from '../../assets/user.svg'
 import contraste from '../../assets/contrast.svg'
 import { FaBars } from "react-icons/fa"
 import '../../App.css'
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import 'bootstrap/dist/css/bootstrap.min.css';
 const NavBar = () => {
-  const [sidebar, setSideBar] = useState(false)
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   let lvl = 0;
   let larguraTela = screen.width;
   let alturaTela = screen.height;
@@ -51,12 +56,22 @@ const NavBar = () => {
   return (
     <nav>
       <div className='Container'>
-        <FaBars onClick={showSidebar} className="aside" />
+        <FaBars onClick={handleShow} className="aside" />
         <Link to="/"><div id="logoHome"><img src={logo} alt="logo" className='logo' /></div></Link>
       </div>
-      <div className='navSobre'></div>
+      <div className='navSobre'>
+      <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          Some text as placeholder. In real life you can have the elements you
+          have chosen. Like, text, images, lists, etc.
+        </Offcanvas.Body>
+      </Offcanvas>
+      </div>
       <div className='logado  '>
-        <div className='simbolos'>
+        <div className='simbolos '>
           <img className='constrasteImg' src={contraste} onClick={contrasteBtn} alt="contraste" />
           <img src={alerta} alt="alerta" />
           <img src={config} alt="onfigurações" />
