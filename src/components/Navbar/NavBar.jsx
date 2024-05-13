@@ -18,13 +18,16 @@ const NavBar = () => {
   let lvl = 0;
   let larguraTela = screen.width;
   let alturaTela = screen.height;
-
-
-  let simbolos = document.querySelector(".logado")
-  if (larguraTela < 550) {
-    simbolos.classList.add("hide")
+  function res(){
+    let simbolos = document.querySelector(".simbolos")
+    if (larguraTela <= 550) {
+      simbolos.classList.add("hide")
+    }
   }
+/*
 
+  
+*/
 
   const showSidebar = () => setSideBar(!sidebar)
 
@@ -54,7 +57,7 @@ const NavBar = () => {
 
   }
   return (
-    <nav>
+    <nav on={res}>
       <div className='Container'>
         <FaBars onClick={handleShow} className="aside" />
         <Link to="/"><div id="logoHome"><img src={logo} alt="logo" className='logo' /></div></Link>
@@ -71,7 +74,7 @@ const NavBar = () => {
       </Offcanvas>
       </div>
       <div className='logado  '>
-        <div className='simbolos '>
+        <div className='simbolos ' >
           <img className='constrasteImg' src={contraste} onClick={contrasteBtn} alt="contraste" />
           <img src={alerta} alt="alerta" />
           <img src={config} alt="onfigurações" />
