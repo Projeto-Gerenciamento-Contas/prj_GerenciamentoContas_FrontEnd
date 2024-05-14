@@ -10,7 +10,8 @@ import Home from './pages/Home/Home'
 import Form from './pages/Form/Form'
 import Login from './pages/Login/Login'
 import Cadastro from './pages/Cadastro/Cadastro'
-import Menu from './pages/Menu/Menu'
+//import Menu from './pages/Menu/Menu'
+//<Route path='/Menu' element={<Menu />} />
 import Acessibilidade from './components/Acessibilidade/Acessibilidade'
 import Endereco from './pages/Endereco/Endereco'
 //import Aside from './components/Aside/Aside'
@@ -31,7 +32,7 @@ function App() {
           <Route path='/Form' element={<Form />} />
           <Route path='/Login' element={<Login />} />          
           <Route path='/cadastro' element={<Cadastro />} />
-          <Route path='/Menu' element={<Menu />} />
+         
           <Route path='/Endereco' element={<Endereco />} />
         </Routes>
         <Footer /> 
