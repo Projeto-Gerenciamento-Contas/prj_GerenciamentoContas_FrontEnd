@@ -1,9 +1,14 @@
 import React from 'react'
 import './Endereco.css'
-import Itemmenu from '../../components/Itemmenu/Itemmenu'
-import luz from '../../assets/Luz.svg'
+import ItemmenuE from '../../components/Itemmenuedit/Itemmenuedit'
+import luz from '../../assets/LuzW.svg'
+import agua from '../../assets/AguaW.svg'
+import gas from '../../assets/GasW.svg'
+import compras from '../../assets/ComprasW.svg'
+import outros from '../../assets/OutrosW.svg'
 import novo from '../../assets/Add.svg'
 import {Link} from 'react-router-dom'
+
 
 const Endereco = () => {
   return (
@@ -11,40 +16,43 @@ const Endereco = () => {
       <section>
         <div>
           <section >
-            <div class="item">
-              <Itemmenu
+            <div className="item">
+              <ItemmenuE
                 img={luz}
                 gastos='R$ 28493'
                 data='hoje'
+                link="/Luz"
               /></div>
-              <div class="item">
-              <Itemmenu
-                img={luz}
+              <div className="item">
+              <ItemmenuE
+                img={agua}
                 gastos='R$ 28493'
                 data='hoje'
+                link="/"
               /></div>
-              <div class="item">
-              <Itemmenu
-                img={luz}
+              <div className="item">
+              <ItemmenuE
+                img={gas}
                 gastos='R$ 28493'
                 data='hoje'
+                link="/"
               /></div>
-              <div class="item">
-              <Itemmenu
-                img={luz}
+              <div className="item">
+              <ItemmenuE
+                img={compras}
                 gastos='R$ 28493'
                 data='hoje'
+                link="/"
               /></div>
-              <div class="item">
-              <Itemmenu
-                img={luz}
+              <div className="item">
+              <ItemmenuE
+                img={outros}
                 gastos='R$ 28493'
                 data='hoje'
+                link="/"
               /></div>
           </section>
-        </div>
-
-        <Link to="/"><div id="sNovo"><img src={novo} alt="novo" className='novo' /></div></Link>
+        </div>        
       </section>
     </main>
   )

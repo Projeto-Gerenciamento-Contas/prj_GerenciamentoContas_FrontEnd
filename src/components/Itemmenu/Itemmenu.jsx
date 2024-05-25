@@ -1,18 +1,18 @@
+
 import React from 'react'
-import Card from 'react-bootstrap/Card';
+
 
 const Itemmenu = ({ img, gastos, data }) => {
     return (
         <>
             <div className="grid">
-                <div className="item"><img src={img} alt="img" fill='#ffffff' /></div>
-                <div className="grid">
-                    <li className='item'>{gastos}</li>
-                    <li className='item'>{data}</li>
+                <div className="menuitem"><img src={img} alt="img" /></div>
+                <div className="display=inline-flex ">
+                    <div className='menuitem'>{gastos}</div>
+                    <div className='menuitem2'>{data}</div>
                 </div>
-                <div className="item"><img src={img} alt="img" /></div>
             </div>
-          
+
         </>
 
     )

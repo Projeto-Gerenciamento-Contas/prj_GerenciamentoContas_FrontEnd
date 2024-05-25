@@ -1,0 +1,41 @@
+form{
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    /* display: flex; */
+  place-items: center;
+
+}
+
+input::placeholder{
+    
+    color: var(--pal1);
+    font-size: 14px;
+}
+
+
+input{
+    border: none;
+    display: block;
+    margin-top: 10px;
+}
+input::-ms-value{
+    padding-left:4rem;
+    color: var(--pal1);
+    font-size: 14px;
+}
+input{
+    width: 1rem;
+}
+.Dinput{
+    border: 1px solid var(--pal2);
+}
+.login{
+    color:var(--pal2);
+    text-transform: uppercase;
+    font-family: "Inter";
+    font-size: 12px;
+}
+#login{
+    border: none;
+}

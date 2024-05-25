@@ -10,7 +10,7 @@
 
 .grid {
     display: grid;
-    display: inline-flex;
+    
     justify-content: space-around;
     margin: 5px;
     padding: auto;
@@ -19,19 +19,36 @@
 
 .item {
     list-style: none;
-    display: inline-flex;
+    
     justify-content: space-around;
-    color: #fff;
+    
     text-decoration: none;
-    margin: 5px;
+    margin: 5px,0,0,0;
     padding: auto;
 }
 
 
 .menuitem {
     list-style: none;
-    display: inline-flex;
-    justify-content: space-around;
+    text-decoration: none;
+    margin: 5px;
+    padding: auto;
+    
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+.menuitem2 {
+    list-style: none;
+    text-decoration: none;
+    margin: 5px,0,0,0;
+    padding: auto;
+    
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 4rem;
+    line-height: 19px;
 }
 
 .menuitem li {
@@ -49,7 +66,7 @@
 
 .menuitem li a {
     list-style: none;
-    color: #fff;
+    
     text-decoration: none;
     font-weight: bold;
 
