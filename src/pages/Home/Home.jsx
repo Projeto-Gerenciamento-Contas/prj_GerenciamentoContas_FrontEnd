@@ -1,36 +1,35 @@
 import React from 'react'
-import LogoB from '../../assets/LogoAzul.svg'
-import {Link} from 'react-router-dom'
+import Logo from "../../components/Logo/Logo"
+import { Link } from 'react-router-dom'
 import './Home.css'
+import Aside from '../../components/Aside/Aside'
 const Home = () => {
   return (
-    <main>
-      <section>
-      <div>
-        <img src={LogoB} alt="Logo" />
-        <h1>Teto<span>Finanças</span></h1>
-        <p><br/>
-        
-        </p>
-        <div>Sobre TetoFinanças </div>
-      <p>
-      Essa aplicação serve para serve para facilitar a economia domestica de uma ou mais residencias, organizando os gastos em diferentes categorias,
-como aparelhos, produtos gastos, etc
-      </p>
+    <>
 
+      <main>
+        <section>
+<Aside/>
+          <div>
+            <Logo/>
+           
+            <h2>Sobre TetoFinanças</h2>
+            <p>
+              Essa aplicação serve para serve para facilitar a economia domestica de uma ou mais residencias, organizando os gastos em diferentes categorias,
+              como aparelhos, produtos gastos, etc
+            </p>
+          </div>
+          <div>
+            
+              <Link to="/Login"><button type='button'>Logar</button></Link>
+            
+              <Link to="/cadastro"><button type='button'>Casdastrar</button></Link>
+           
+          </div>
 
-      </div>
-      <div>
-        <div >
-        <Link to ="/Login"><button type='button'>Logar</button></Link>
-        </div>
-        <div>
-        <Link to ="/cadastro"><button type='button'>Casdastrar</button></Link>
-        </div>
-      </div>
-     
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   )
 }
 
