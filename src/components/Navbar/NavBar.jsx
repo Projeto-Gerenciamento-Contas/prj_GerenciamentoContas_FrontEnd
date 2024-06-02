@@ -18,38 +18,21 @@ const NavBar = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  let lvl = 0;
-  let larguraTela = screen.width;
-  let alturaTela = screen.height;
-  function res(){
-    const simbolos = document.querySelector(".simbolos")
-    if (larguraTela <= 550) {
-      simbolos.classList.add("hide")
-    }
-  }
+ 
   function aparece(){
     const aparelhos = document.querySelectorAll(".aparelhos")
-    aparelhos[0].classList.remove(".hide")
-    aparelhos.forEach(aparelhos.classList.toggle(".hide"))
-
+    for(let i in aparelhos){
+      aparelhos[i].classList.toggle("hide")
+    }
   }
-/*
-
-  
-*/
-
-  const showSidebar = () => setSideBar(!sidebar)
-
+ 
 
 
   function contrasteBtn() {
-
-    let c = document.querySelector("p")
-    c.innerText = `contraste ${lvl}`
-    if (lvl >= 2) {
-      lvl = 0
-    } else {
-      lvl++;
+    const logado = document.querySelector(".logado")
+    const noCadastro = document.querySelector(".noCadastro")
+    logado.classList.toggle(".hide")
+    noCadastro.classList.toggle(".hide")
     }
     /*  if (lvl == 0){//contraste normal
         tag[0].href = url1
@@ -64,42 +47,46 @@ const NavBar = () => {
         lvl = 0
       }*/
 
-  }
+  
   return (
-    <nav onLoad={res}>
+    
+    <nav >
       <div className='Container'>
         <FaBars onClick={handleShow} className="aside" />
         <Link to="/"><div id="logoHome"><img src={logo} alt="logo" className='logo' /></div></Link>
       </div>
       <div className='navSobre'>
       <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header >
+        <Offcanvas.Header closeButton>
           <Offcanvas.Title>
           <Link to="/" className='Link'> <h1><img src={logoAzul} className='logoAzul' alt="logo azul" />Teto<span>finanças</span> </h1></Link>
             </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
         
-          <ul>
-            <li>Endereços</li>
-            <li id="aparelho" onClick={aparece}>Aparelhos
-            <ul>
-            <li className='aparelhos hide'>aparelhos eletricos</li>
-            <li className='aparelhos hide'>aparelhos de agua</li>
-            <li className='aparelhos hide'>aparelhos de gas</li>
+        <Link to="/"><div id="logoHome"><img src={logo} alt="logo" className='logo' /></div></Link>
+       
+        <ul>
+          <Link to="/Endereco"><li>Endereços</li></Link>
+          <li id="Aparelhos" onClick={aparece}>Aparelhos
+            <ul >
+            <Link to="/Luz"> <li className='aparelhos hide'>Aparelhos eletricos</li></Link>
+            <Link to="/Agua"> <li className='aparelhos hide'>Aparelhos de agua</li></Link>
+            <Link to="/Gas"> <li className='aparelhos hide'>Aparelhos de gas</li></Link>
             </ul></li>
-            <li>compras</li>
-            <li>outros</li>
-            
-          </ul>
+            <Link to="/Compras"> <li>Compras</li></Link>
+            <Link to="/Outros"> <li>Outros</li></Link>
+
+        </ul>
         </Offcanvas.Body>
       </Offcanvas>
       </div>
-      <div className='logado  '>
+
+      <div className='logado hide'>
         <div className='simbolos ' >
-          <img className='constrasteImg' src={contraste} onClick={contrasteBtn} alt="contraste" />
+         
           <img src={alerta} alt="alerta" />
-          <img src={config} alt="configurações" />
+          <Link to="/EditCadastro"><img src={config} alt="configurações" /></Link>
         </div>
 
         <div className='usuario  '>
@@ -107,13 +94,13 @@ const NavBar = () => {
           <Link to="/Login"><img src={user} className='user' alt="user" /></Link>
         </div>
       </div>
-      <div className='noCadastro hide'>
-        <img className='constrasteImg' src={contraste} onClick={contrasteBtn} alt="alerta" />
+      <div className='noCadastro '>
+     
         <Link to="/Login"><button type='button'>Logar</button></Link>
         <Link to="/cadastro"><button type='button'>Casdastrar</button></Link>
       </div>
     </nav>
   )
-}
+  }
 
 export default NavBar

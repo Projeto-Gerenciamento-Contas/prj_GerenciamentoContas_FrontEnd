@@ -1,18 +1,11 @@
 import React from 'react'
-import './Cadastro.css'
+import './EditCadastro.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { mask } from '../../js/mask'
-const Cadastro = () => {
+import comfir from '../../assets/Confirmar.svg'
+import excluir from '../../assets/Excluir.svg'
 
-    const [valor, setValor] = useState('')
-
-    function handleChangeMask(event) {
-        const { value } = event.target
-        setValor(mask(value))
-        setCpfcnpj(value)
-    }
-
+const EditCadastro = () => {
     const [nome, setName] = useState("")
     const [email, setEmail] = useState("")
     const [data, setData] = useState("")
@@ -23,7 +16,6 @@ const Cadastro = () => {
         e.preventDefault()
         console.log("Enviando forms")
         console.log(nome, email)
-        setCpfcnpj("")
         setName("")
         setEmail("")
         setData("")
@@ -36,21 +28,13 @@ const Cadastro = () => {
             <section>
                 <div>
                     <p>
-                        Formulário de Cadastro
+                        Atualizar Cadastro
                     </p>
                 </div>
             </section>
             <div>
                 <form onSubmit={handleSubmit}>
                     <p> <br /> </p>
-
-                    
-                    <label>
-                        <span>CPF ou CNPJ</span>
-                        <input type='text' name='cpfcnpj' id='cpfcnpj' placeholder=''
-                            onChange={handleChangeMask} value={cpfcnpj} />
-                    </label><p><br /> </p>
-
                     <label>
                         <span>Nome</span>
                         <input type='text' name='nome' id='Nome' placeholder='Nome Completo'
@@ -79,7 +63,10 @@ const Cadastro = () => {
                         <input type='password' name='key' id='key' placeholder='*********'
                             onChange={(e) => setKey(e.target.value)} value={Ckey} />
                     </label><p> <br /> </p>
-                    <Link to="/Menu"><button type='button'>Enviar</button></Link>
+                    <div className='justify-content: space-around;'>
+                        <Link to="/Menu"><button type='button'><img src={comfir} alt="img" /></button></Link>
+                        <Link to="/Menu"><button type='button'><img src={excluir} alt="img" /></button></Link>
+                    </div>
                 </form>
 
             </div>
@@ -90,4 +77,4 @@ const Cadastro = () => {
     )
 }
 
-export default Cadastro
+export default EditCadastro

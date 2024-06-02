@@ -5,19 +5,19 @@ import { Link } from 'react-router-dom'
 import comfir from '../../assets/Confirmar.svg'
 import excluir from '../../assets/Excluir.svg'
 
-const AparelhoLuz = () => {
+const ItemOutros = () => {
     const [nome, setName] = useState("")
-    const [pot, setPotencia] = useState("")
-    const [usodia, setUsodia] = useState("")
+    const [preco, setPreco] = useState("")
+    const [Compl, setCompl] = useState("")
     
 
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log("Enviando forms")
-        console.log(nome, pot,usodia)
+        console.log(nome, preco,Compl)
         setName("")
-        setPotencia("")
-        setUsodia("")        
+        setPreco("")
+        setCompl("")        
     }
 
     return (
@@ -33,20 +33,20 @@ const AparelhoLuz = () => {
                 <form onSubmit={handleSubmit}>
                     <p> <br /> </p>
                     <label>
-                        <span>Nome do Aparelho</span>
-                        <input type='text' name='nome' id='Nome' placeholder='Nome do Aparelho'
+                        <span>Nome do Serviço</span>
+                        <input type='text' name='nome' id='Nome' placeholder='Nome do produto'
                             onChange={(e) => setName(e.target.value)} value={nome} />
                     </label><p><br /> </p>
                     <label>
-                        <span>Potência do Aparelho</span>
-                        <input type='number' name='potencia' id='potencia' placeholder='Potência do Aparelho'
-                            onChange={(e) => setPotencia(e.target.value)} value={pot} />
+                        <span>Valor total do Serviço</span>
+                        <input type='number' name='vazao' id='vazao' placeholder='Valor total do Serviço'
+                            onChange={(e) => setVazao(e.target.value)} value={vazao} />
                     </label><p><br /> </p>
                     <label>
-                        <span>Tempo de uso diário do Aparelho(h)</span>
-                        <input type='text' name='usodia' id='usodia' placeholder='Tempo de uso diário em horas'
-                            onChange={(e) => setUsodia(e.target.value)} value={usodia} />
-                    </label><p><br /> </p>
+                        <span>Complemento</span>
+                        <input type='text' name='complemento' id='complemento' placeholder='Ex:tipo,marca,dependente...'
+                            onChange={(e) => setCompl(e.target.value)} value={Compl} />
+                    </label><p> <br /> </p>
                     
                     <div className='justify-content: space-around;'>
                         <Link to="/Luz"><button type='button'><img src={comfir} alt="img" /></button></Link>
@@ -57,4 +57,4 @@ const AparelhoLuz = () => {
         </main>
     )
 }
-export default AparelhoLuz
+export default ItemOutros
