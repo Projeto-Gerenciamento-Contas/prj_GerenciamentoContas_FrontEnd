@@ -1,11 +1,14 @@
 import React from 'react'
-import '../Form/Form.css'
+import './Login.css'
+import "../../App.css"
+import Logo from "../../components/Logo/Logo"
+import User from "../../assets/user.svg"
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 const Login = () => {
     const [login, setLogin] = useState("")
     const [key, setKey] = useState("")
-    
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -13,36 +16,39 @@ const Login = () => {
         console.log(login)
         setLogin("")
         setKey("")
-        }
+    }
 
     return (
         <main>
-            <section>
-                <div></div>
-                <p>
-                    
-                </p>
-            </section>
+            <Logo />
             <div>
                 <form onSubmit={handleSubmit}>
-                    <p> <br /> </p>
-                    
+
+
                     <label>
-                        <span>Login</span>
-                        <input type='email' name='login' id='login' placeholder='nome@site.com'
+                        <span className='login'>Login</span>
+                        <div className='Dinput'>
+                        <img src={User} alt="" />
+                        <input type='email' name='login' id='login' placeholder='Nome de usuario ou email'
                             onChange={(e) => setLogin(e.target.value)} value={login} />
-                    </label><p> <br /> </p>
-                  
-                    
+                            </div>
+                    </label>
+
+
                     <label>
-                        <span>Senha</span>
+                        <span className='login'>Senha</span>
                         <input type='password' name='key' id='key' placeholder='*********'
                             onChange={(e) => setKey(e.target.value)} value={key} />
-                    </label><p> <br /> </p>
-                    
-                    <Link to ="/Menu"><button type='button'>Entrar</button></Link>
-                
-                    
+                    </label>
+                    <label>
+
+                        <input type="checkbox" />
+                        <span className='login'>Lembre-me</span>
+                    </label>
+
+                    <Link to="/Menu"><button type='button' className='log'>Entrar</button></Link>
+
+
                 </form>
 
             </div>

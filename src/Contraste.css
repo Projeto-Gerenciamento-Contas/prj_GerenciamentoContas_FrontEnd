@@ -1,4 +1,5 @@
 
+
 :root{
     --pal1:#5075BF;
     --pal2:#1C418C;
@@ -17,7 +18,7 @@
     text-decoration: none !important;
     background-color: #000 !important;
     color: white;
-    border: 1px solid #fff;
+    
   }
   h1{
     /* TetoFinanças */
@@ -30,8 +31,13 @@
   text-decoration: none;
   color: white !important;
   }
-  
+  nav, footer, .menuback, .item, .offCanvas{
+    border: 1px solid #fff;
+    border-radius: 0.3rem;
+  }
+
 button {
+  border: 1px solid #fff;
     font-family: 'Inter',Arial, Helvetica, sans-serif !important;
     font-style: normal !important;
     font-weight: 600 !important;
@@ -40,7 +46,10 @@ button {
     box-sizing: border-box !important;
     width: 6rem !important;
     height: 3rem !important;
+    background-color: var(--pal6) !important;
     border: 1px solid white !important;
     border-radius: 20rem !important;
-    color: #FFFFFF !important;
+    color: #000 !important;
+    
   }
+  
