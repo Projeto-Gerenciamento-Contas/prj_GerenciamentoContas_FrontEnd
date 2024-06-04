@@ -44,7 +44,7 @@ main {
 }
 
 
-buttonsp {
+.buttonsp {
   font-family: 'Inter',Arial, Helvetica, sans-serif !important;
   font-style: normal !important;
   font-weight: 600 !important;
@@ -59,7 +59,7 @@ buttonsp {
   color: #FFFFFF !important;
  
 }
-buttonsp :hover{
+.buttonsp:hover{
   cursor: pointer;
   transform: scale(1.5px) !important;
   

@@ -96,8 +96,8 @@ const NavBar = () => {
       </div>
       <div className='noCadastro '>
      
-        <Link to="/Login"><button type='button'>Logar</button></Link>
-        <Link to="/cadastro"><button type='button'>Casdastrar</button></Link>
+        <Link to="/Login"><button className="buttonsp" type='button'>Logar</button></Link>
+        <Link to="/cadastro"><button className="buttonsp" type='button'>Casdastrar</button></Link>
       </div>
     </nav>
   )
