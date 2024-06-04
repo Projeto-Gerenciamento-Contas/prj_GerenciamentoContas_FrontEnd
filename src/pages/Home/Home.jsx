@@ -2,14 +2,14 @@ import React from 'react'
 import Logo from "../../components/Logo/Logo"
 import { Link } from 'react-router-dom'
 import './Home.css'
-import Aside from '../../components/Aside/Aside'
+
 const Home = () => {
   return (
     <>
 
       <main>
         <section>
-<Aside/>
+
           <div>
             <Logo/>
            
@@ -21,9 +21,9 @@ const Home = () => {
           </div>
           <div>
             
-              <Link to="/Login"><button type='button'>Logar</button></Link>
+              <Link to="/Login"><button className='buttonsp' type='button'>Logar</button></Link>
             
-              <Link to="/cadastro"><button type='button'>Casdastrar</button></Link>
+              <Link to="/cadastro"><button className='buttonsp' type='button'>Casdastrar</button></Link>
            
           </div>
 

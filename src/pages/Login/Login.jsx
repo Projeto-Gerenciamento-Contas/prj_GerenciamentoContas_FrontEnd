@@ -3,11 +3,15 @@ import './Login.css'
 import "../../App.css"
 import Logo from "../../components/Logo/Logo"
 import User from "../../assets/user.svg"
+import Lock from "../../assets/lock.svg"
+import Input from '../../components/Input/Input'
+import { TextLink } from '../../components/TextLink/TextLink'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 const Login = () => {
     const [login, setLogin] = useState("")
     const [key, setKey] = useState("")
+
 
 
     const handleSubmit = (e) => {
@@ -23,33 +27,40 @@ const Login = () => {
             <Logo />
             <div>
                 <form onSubmit={handleSubmit}>
+                    <Input
+                        func="login"
+                        img={User}
+                        alt='logo usuario'
+                        type="email"
+                        placeholder='Nome de usuario ou email'
+
+                    />
+                    <Input
+                        func="Senha"
+                        img={Lock}
+                        alt='cadeado'
+                        type="password"
+                        placeholder='*********'
+
+                    />
 
 
-                    <label>
-                        <span className='login'>Login</span>
-                        <div className='Dinput'>
-                        <img src={User} alt="" />
-                        <input type='email' name='login' id='login' placeholder='Nome de usuario ou email'
-                            onChange={(e) => setLogin(e.target.value)} value={login} />
-                            </div>
-                    </label>
 
 
-                    <label>
-                        <span className='login'>Senha</span>
-                        <input type='password' name='key' id='key' placeholder='*********'
-                            onChange={(e) => setKey(e.target.value)} value={key} />
-                    </label>
-                    <label>
 
-                        <input type="checkbox" />
-                        <span className='login'>Lembre-me</span>
-                    </label>
+                    <Input
+                        func="Lembrar conta"
+                        type="checkbox"
+                        style={{ width: "20px", height: "20px" }}
+                    />
 
+                    <TextLink span="Novo usuario?" link="/Cadastro" texto="Crie uma conta"/>
+                    <TextLink span="Esqueceu a senha?" link="/" texto="Trocar a senha"/>
                     <Link to="/Menu"><button type='button' className='log'>Entrar</button></Link>
 
 
                 </form>
+                <hr/>
 
             </div>
         </main>
