@@ -8,8 +8,9 @@ import compras from '../../assets/ComprasW.svg'
 import outros from '../../assets/OutrosW.svg'
 import home from '../../assets/Home.svg'
 import novo from '../../assets/Add.svg'
-import {Link} from 'react-router-dom'
-
+import { Link } from 'react-router-dom'
+import { Enderecos } from '../../components/Endereco/Enderecos'
+import { AddEndereco } from '../../components/Endereco/AddEndereco'
 const Home = () => {
   return (
     <main>
@@ -24,7 +25,7 @@ const Home = () => {
                   data='hoje'
                 /></div>
               <div className="item">
-              <Itemmenu
+                <Itemmenu
                   img={agua}
                   gastos='R$ 28493'
                   data='hoje'
@@ -33,38 +34,40 @@ const Home = () => {
             </div>
             <div className="grid">
               <div className="item"><Itemmenu
-                  img={gas}
-                  gastos='R$ 28493'
-                  data='hoje'
-                /></div>
+                img={gas}
+                gastos='R$ 28493'
+                data='hoje'
+              /></div>
               <div className="item"><Itemmenu
-                  img={compras}
-                  gastos='R$ 28493'
-                  data='hoje'
-                /></div>
+                img={compras}
+                gastos='R$ 28493'
+                data='hoje'
+              /></div>
             </div>
             <div className="grid">
               <div className="item"><Itemmenu
-                  img={outros}
-                  gastos='R$ 28493'
-                  data='hoje'
-                /></div>
+                img={outros}
+                gastos='R$ 28493'
+                data='hoje'
+              /></div>
               <div ></div>
             </div>
           </section>
         </div>
+
         <div>
-          <section className='menuback'>
-            <div className='enderecoback'>
-              <div className="itemendereco">
-                <Itemmenu
-                  img={home}
-                  gastos='pessoal'
-                  data='08351-743 Rua das mangeiras,420'
-                /></div>
-              <div className="itemendereco">
-              <Link to="/Endereco"><div id="sNovo"><img src={novo} alt="novo" className='novo' /></div></Link>
-              </div>
+
+          <section className='menuback '>
+            <h2 style={{ color: 'white' }}>Residências</h2>
+            <div className='grid center'>
+
+              <Enderecos
+                tipo="Pessoal"
+                cep="08351-743"
+                rua="Rua das mangeiras"
+                numero="420"
+              />
+              <AddEndereco />
             </div>
           </section>
         </div>
