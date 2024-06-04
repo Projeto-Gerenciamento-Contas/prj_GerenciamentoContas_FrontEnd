@@ -44,7 +44,7 @@ main {
 }
 
 
-.buttonsp {
+button {
   font-family: 'Inter',Arial, Helvetica, sans-serif !important;
   font-style: normal !important;
   font-weight: 600 !important;
@@ -59,9 +59,8 @@ main {
   color: #FFFFFF !important;
  
 }
-.buttonsp:hover{
+button:hover{
   cursor: pointer;
-  transform: scale(1.5px) !important;
   
  }
 .card {

@@ -7,13 +7,11 @@ import gas from '../../assets/GasW.svg'
 import novo from '../../assets/Add.svg'
 import {Link} from 'react-router-dom'
 
-import Logo from '../../components/Logo/Logo'
+
 const Gas = () => {
   return (
     <main>
       <section>
-      <Logo/>
-        <h1>Aparelhos de gás</h1>
         <div>
           <section >
             <div className="item">
@@ -21,21 +19,27 @@ const Gas = () => {
                 img={gas}
                 gastos='R$ 28493'
                 data='hoje'
-                link="/Aparelhogas"
+                link="/"
               /></div>
-            <div className="item">
+              <div className="item">
               <ItemmenuE
                 img={gas}
                 gastos='R$ 28493'
-                data='total'
-                link="/Aparelhogas"
+                data='hoje'
+                link="/"
               /></div>
-                      
+              <div className="item">
+              <ItemmenuE
+                img={gas}
+                gastos='R$ 28493'
+                data='hoje'
+                link="/"
+              /></div>            
               
           </section>
         </div>
 
-        <Link to="/Aparelhogas"><div id="sNovo"><img src={novo} alt="novo" className='novo' /></div></Link>
+        <Link to="/"><div id="sNovo"><img src={novo} alt="novo" className='novo' /></div></Link>
       </section>
     </main>
   )

@@ -1,29 +1,23 @@
 import React from 'react'
 import './Submenu.css'
 import ItemmenuE from '../../components/Itemmenuedit/Itemmenuedit'
-
+import luz from '../../assets/LuzW.svg'
 import agua from '../../assets/AguaW.svg'
-
+import gas from '../../assets/GasW.svg'
+import compras from '../../assets/ComprasW.svg'
+import outros from '../../assets/OutrosW.svg'
+import home from '../../assets/Home.svg'
 import novo from '../../assets/Add.svg'
-import Logo from '../../components/Logo/Logo'
-import { Link } from 'react-router-dom'
+import aparelho from '../../assets/Aparelho.svg'
+import {Link} from 'react-router-dom'
 
 
 const Agua = () => {
   return (
     <main>
       <section>
-      <Logo/>
-        <h1>Aparelhos de agua</h1>
         <div>
           <section >
-            <div className="item">
-              <ItemmenuE
-                img={agua}
-                gastos='R$ 28493'
-                data='total'
-                link="/AparelhoAgua"
-              /></div>
             <div className="item">
               <ItemmenuE
                 img={agua}
@@ -31,7 +25,34 @@ const Agua = () => {
                 data='hoje'
                 link="/AparelhoAgua"
               /></div>
-         
+              <div className="item">
+              <ItemmenuE
+                img={agua}
+                gastos='R$ 28493'
+                data='hoje'
+                link="/AparelhoAgua"
+              /></div>
+              <div className="item">
+              <ItemmenuE
+                img={agua}
+                gastos='R$ 28493'
+                data='hoje'
+                link="/AparelhoAgua"
+              /></div>
+              <div className="item">
+              <ItemmenuE
+                img={agua}
+                gastos='R$ 28493'
+                data='hoje'
+                link="/AparelhoAgua"
+              /></div>
+              <div className="item">
+              <ItemmenuE
+                img={agua}
+                gastos='R$ 28493'
+                data='hoje'
+                link="/AparelhoAgua"
+              /></div>
           </section>
         </div>
 

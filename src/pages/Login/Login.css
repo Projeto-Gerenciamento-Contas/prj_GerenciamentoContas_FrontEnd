@@ -15,41 +15,27 @@ input::placeholder{
 
 
 input{
-    background-color: white;
     border: none;
-  
+    display: block;
     margin-top: 10px;
-   
 }
 input::-ms-value{
     padding-left:4rem;
     color: var(--pal1);
     font-size: 14px;
 }
-.img_log{
-    margin-left: 7px;
+input{
+    width: 1rem;
 }
 .Dinput{
-    width: 22rem;
-    
-    border: 2px solid var(--pal2);
-    border-radius: 10px;
-    overflow: hidden;
+    border: 1px solid var(--pal2);
 }
 .login{
     color:var(--pal2);
     text-transform: uppercase;
     font-family: "Inter";
     font-size: 12px;
-
 }
 #login{
-    display: inline;
     border: none;
-    width: 84%;
-    margin-top: 0;
-   
-    margin-left: 1rem;
-    justify-content: flex-end;
-    background-color: white;
 }

@@ -8,7 +8,7 @@ import compras from '../../assets/ComprasW.svg'
 import outros from '../../assets/OutrosW.svg'
 import novo from '../../assets/Add.svg'
 import {Link} from 'react-router-dom'
-import Logo from "../../components/Logo/Logo"
+
 
 const Endereco = () => {
   return (
@@ -16,42 +16,40 @@ const Endereco = () => {
       <section>
         <div>
           <section >
-            <Logo/>
-            <h1>Enderecos: {}</h1>
             <div className="item">
               <ItemmenuE
                 img={luz}
                 gastos='R$ 28493'
-                data='total'
+                data='hoje'
                 link="/Luz"
               /></div>
               <div className="item">
               <ItemmenuE
                 img={agua}
                 gastos='R$ 28493'
-                data='total'
-                link="/Agua"
+                data='hoje'
+                link="/"
               /></div>
               <div className="item">
               <ItemmenuE
                 img={gas}
                 gastos='R$ 28493'
                 data='hoje'
-                link="/Gas"
+                link="/"
               /></div>
               <div className="item">
               <ItemmenuE
                 img={compras}
                 gastos='R$ 28493'
                 data='hoje'
-                link="/Compras"
+                link="/"
               /></div>
               <div className="item">
               <ItemmenuE
                 img={outros}
                 gastos='R$ 28493'
                 data='hoje'
-                link="/Outros"
+                link="/"
               /></div>
           </section>
         </div>        

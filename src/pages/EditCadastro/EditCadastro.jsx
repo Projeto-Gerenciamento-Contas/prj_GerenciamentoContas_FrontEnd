@@ -64,8 +64,8 @@ const EditCadastro = () => {
                             onChange={(e) => setKey(e.target.value)} value={Ckey} />
                     </label><p> <br /> </p>
                     <div className='justify-content: space-around;'>
-                        <Link to="/Menu"><button  className="buttonsp"type='button'><img src={comfir} alt="img" /></button></Link>
-                        <Link to="/Menu"><button className="buttonsp" type='button'><img src={excluir} alt="img" /></button></Link>
+                        <Link to="/Menu"><button type='button'><img src={comfir} alt="img" /></button></Link>
+                        <Link to="/Menu"><button type='button'><img src={excluir} alt="img" /></button></Link>
                     </div>
                 </form>
 
