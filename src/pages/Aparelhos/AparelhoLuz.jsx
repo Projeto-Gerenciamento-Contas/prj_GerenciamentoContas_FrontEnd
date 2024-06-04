@@ -1,59 +1,66 @@
 import React from 'react'
 import './Aparelhos.css'
 import { useState } from 'react'
+import '../Login/Login.css'
+import "../../App.css"
+
+import Input from '../../components/Input/Input'
 import { Link } from 'react-router-dom'
 import comfir from '../../assets/Confirmar.svg'
 import excluir from '../../assets/Excluir.svg'
+import Logo from '../../components/Logo/Logo'
 
 const AparelhoLuz = () => {
     const [nome, setName] = useState("")
     const [pot, setPotencia] = useState("")
     const [usodia, setUsodia] = useState("")
-    
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log("Enviando forms")
-        console.log(nome, pot,usodia)
+        console.log(nome, pot, usodia)
         setName("")
         setPotencia("")
-        setUsodia("")        
+        setUsodia("")
     }
 
     return (
         <main>
             <section>
-                <div>
-                    <p>
-                        
-                    </p>
-                </div>
-            </section>
-            <div>
+                <Logo />
+                <h1>Salvar Aparelho eletrico</h1>
+
                 <form onSubmit={handleSubmit}>
-                    <p> <br /> </p>
-                    <label>
-                        <span>Nome do Aparelho</span>
-                        <input type='text' name='nome' id='Nome' placeholder='Nome do Aparelho'
-                            onChange={(e) => setName(e.target.value)} value={nome} />
-                    </label><p><br /> </p>
-                    <label>
-                        <span>Potência do Aparelho</span>
-                        <input type='number' name='potencia' id='potencia' placeholder='Potência do Aparelho'
-                            onChange={(e) => setPotencia(e.target.value)} value={pot} />
-                    </label><p><br /> </p>
-                    <label>
-                        <span>Tempo de uso diário do Aparelho(h)</span>
-                        <input type='text' name='usodia' id='usodia' placeholder='Tempo de uso diário em horas'
-                            onChange={(e) => setUsodia(e.target.value)} value={usodia} />
-                    </label><p><br /> </p>
+                    <Input
                     
+                    func="Nome do aparelho"
+                    type="text"
+                    placeholder="Nome do aparelho"
+                    />
+                    <Input
+                    
+                    func="Potencia do aparelho (WATTS)"
+                    type="number"
+                    placeholder="W"
+                    />
+                    <Input id="tempo"
+                    
+                    func="Tempo de uso diário do Aparelho(h)"
+                    type="time"
+                    placeholder="Potencia do aparelho"
+                    />
+               
+                 
+                  
+
                     <div className='justify-content: space-around;'>
-                        <Link to="/Luz"><button type='button'><img src={comfir} alt="img" /></button></Link>
-                        <Link to="/Luz"><button type='button'><img src={excluir} alt="img" /></button></Link>
+                        <Link to="/Luz"><button className="buttonsp" type='button'><img src={comfir} alt="img" /></button></Link>
+                        <Link to="/Luz"><button className="buttonsp" type='button'><img src={excluir} alt="img" /></button></Link>
                     </div>
                 </form>
-            </div>
+
+            </section>
         </main>
     )
 }

@@ -6,6 +6,7 @@ import aparelho from '../../assets/Aparelho.svg'
 import compras from '../../assets/ComprasW.svg'
 import novo from '../../assets/Add.svg'
 import {Link} from 'react-router-dom'
+import Logo from '../../components/Logo/Logo'
 
 
 const Compras = () => {
@@ -14,11 +15,13 @@ const Compras = () => {
       <section>
         <div>
           <section >
+            <Logo/>
+            <h1>Compras</h1>
             <div className="item">
               <ItemmenuE
                 img={compras}
                 gastos='R$ 28493'
-                data='hoje'
+                data='total'
                 link="/ItemCompras"
               /></div>
               <div className="item">
@@ -28,27 +31,9 @@ const Compras = () => {
                 data='hoje'
                 link="/ItemCompras"
               /></div>
-              <div className="item">
-              <ItemmenuE
-                img={compras}
-                gastos='R$ 28493'
-                data='hoje'
-                link="/ItemCompras"
-              /></div>
-              <div className="item">
-              <ItemmenuE
-                img={aparelho}
-                gastos='R$ 28493'
-                data='hoje'
-                link="/ItemCompras"
-              /></div>
-              <div className="item">
-              <ItemmenuE
-                img={compras}
-                gastos='R$ 28493'
-                data='hoje'
-                link="/ItemCompras"
-              /></div>
+              
+             
+              
           </section>
         </div>
 
