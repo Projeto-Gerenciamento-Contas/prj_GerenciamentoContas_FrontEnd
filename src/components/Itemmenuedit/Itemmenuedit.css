@@ -32,6 +32,9 @@
     list-style: none;
     
     justify-content: space-around;
+    @media screen {
+        
+    }
 }
 
 .menuitem li {

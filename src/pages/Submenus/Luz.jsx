@@ -3,56 +3,58 @@ import './Submenu.css'
 import ItemmenuE from '../../components/Itemmenuedit/Itemmenuedit'
 import luz from '../../assets/LuzW.svg'
 import aparelho from '../../assets/Aparelho.svg'
+import Logo from '../../components/Logo/Logo'
 
 import novo from '../../assets/Add.svg'
 import {Link} from 'react-router-dom'
-
+import { useEffect } from 'react'
+import LuzMap from './LuzMap'
+import { useState } from 'react'
 
 const Luz = () => {
+  const [AparelhosLuz, setAparelhosLuz] = useState([])
+  const aparelhoLuz = {
+    "valorAparelho": 0,
+    "potencia": 0,
+    "tempoUsoEletrico": null,
+    "nomeAparelho":""
+
+}
+useEffect(() => {
+
+  fetch("http://localhost:8090/enderecos/aparelhos/eletricos/listar", {//metodo get
+      method: "get",
+      headers: {
+          "Content-type": "application/json",
+          "Accept": "application/json"
+      }
+
+  })
+
+      .then((res) => res.json())
+      .then((data) => {
+        
+          setAparelhosLuz(data)
+      })
+      .catch((err) => alert(err))
+
+}, [])
+  
   return (
     <main>
       <section>
-        <div>
-          <section >
-            <div className="item">
-              <ItemmenuE
-                img={luz}
-                gastos='R$ 28493'
-                data='hoje'
-                link="/AparelhoLuz"
-              /></div>
-              <div className="item">
-              <ItemmenuE
-                img={aparelho}
-                gastos='R$ 28493'
-                data='hoje'
-                link="/AparelhoLuz"
-              /></div>
-              <div className="item">
-              <ItemmenuE
-                img={aparelho}
-                gastos='R$ 28493'
-                data='hoje'
-                link="/AparelhoLuz"
-              /></div>
-              <div className="item">
-              <ItemmenuE
-                img={aparelho}
-                gastos='R$ 28493'
-                data='hoje'
-                link="/AparelhoLuz"
-              /></div>
-              <div className="item">
-              <ItemmenuE
-                img={aparelho}
-                gastos='R$ 28493'
-                data='hoje'
-                link="/AparelhoLuz"
-              /></div>
-          </section>
-        </div>
+      
+       
+           
+             
+           <div>
+    <LuzMap vetor={AparelhosLuz} /> 
+ </div>
+            
+        
+        
 
-        <Link to="/AparelhoLuz"><div id="sNovo"><img src={novo} alt="novo" className='novo' /></div></Link>
+       
       </section>
     </main>
   )

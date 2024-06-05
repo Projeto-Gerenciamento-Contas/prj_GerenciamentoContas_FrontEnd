@@ -1,59 +1,77 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Aparelhos.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import comfir from '../../assets/Confirmar.svg'
 import excluir from '../../assets/Excluir.svg'
-
+import Input from '../../components/Input/Input'
+import Logo from '../../components/Logo/Logo'
+import ItemmenuE from '../../components/Itemmenuedit/Itemmenuedit'
+import agua from '../../assets/AguaW.svg'
+import Agua from "../Submenus/Agua"
 const AparelhoAgua = () => {
+    const [AparelhosAgua, setAparelhosAgua] = useState([])
     const [nome, setName] = useState("")
     const [vazao, setVazao] = useState("")
     const [tempuso, setTempuso] = useState("")
-    
+    const aparelhoAgua = {
+   
+        "valorAparelhoAgua": 0,
+        "vazaoAgua":0,
+        "tempoUsoAgua": null,
+        "nomeAparelhoAgua": ""
+    }
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log("Enviando forms")
-        console.log(nome, vazao,tempuso)
+        console.log(nome, vazao, tempuso)
         setName("")
         setVazao("")
-        setTempuso("")        
+        setTempuso("")
     }
+  
 
     return (
         <main>
             <section>
-                <div>
-                    <p>
-                        
-                    </p>
-                </div>
-            </section>
-            <div>
+                <Logo />
+                <h1>Salvar Aparelho de água</h1>
+                
+
                 <form onSubmit={handleSubmit}>
-                    <p> <br /> </p>
-                    <label>
-                        <span>Nome do Aparelho</span>
-                        <input type='text' name='nome' id='Nome' placeholder='Nome do Aparelho'
-                            onChange={(e) => setName(e.target.value)} value={nome} />
-                    </label><p><br /> </p>
-                    <label>
-                        <span>Vazão do Aparelho</span>
-                        <input type='number' name='vazao' id='vazao' placeholder='Potência do Aparelho'
-                            onChange={(e) => setVazao(e.target.value)} value={vazao} />
-                    </label><p><br /> </p>
-                    <label>
-                        <span>Tempo de uso do Aparelho(h)</span>
-                        <input type='number' name='tempuso' id='tempuso' placeholder='Tempo de uso diário em horas'
-                            onChange={(e) => setTempuso(e.target.value)} value={tempuso} />
-                    </label><p><br /> </p>
+
+                    <Input
+
+                        func="Nome do aparelho"
+                        type="text"
+                        placeholder="Nome do aparelho"
+                    />
+                    <Input
+
+                        func="Vazão do aparelho (L/M)"
+                        type="number"
+                        placeholder="W"
+                    />
+
+                    <Input id="tempo"
+
+                        func="Tempo de uso diário do Aparelho(h)"
+                        type="time"
+                        placeholder="Potencia do aparelho"
+                    />
                     
+             
+              
+
                     <div className='justify-content: space-around;'>
-                        <Link to="/Agua"><button type='button'><img src={comfir} alt="img" /></button></Link>
-                        <Link to="/Agua"><button type='button'><img src={excluir} alt="img" /></button></Link>
+                        <Link to="/Agua"><button className='buttonsp ' type='button'><img src={comfir} alt="img" /></button></Link>
+                        <Link to="/Agua"><button  className='buttonsp ' type='button'><img src={excluir} alt="img" /></button></Link>
                     </div>
                 </form>
-            </div>
+
+            </section>
         </main>
     )
 }

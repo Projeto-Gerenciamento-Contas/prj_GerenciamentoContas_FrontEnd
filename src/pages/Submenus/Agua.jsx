@@ -1,65 +1,42 @@
-import React from 'react'
-import './Submenu.css'
-import ItemmenuE from '../../components/Itemmenuedit/Itemmenuedit'
-import luz from '../../assets/LuzW.svg'
-import agua from '../../assets/AguaW.svg'
-import gas from '../../assets/GasW.svg'
-import compras from '../../assets/ComprasW.svg'
-import outros from '../../assets/OutrosW.svg'
-import home from '../../assets/Home.svg'
-import novo from '../../assets/Add.svg'
-import aparelho from '../../assets/Aparelho.svg'
-import {Link} from 'react-router-dom'
+import React, { useEffect } from 'react'
 
+import { useState } from 'react'
 
+import AguaMap from './AguaMap'
 const Agua = () => {
-  return (
-    <main>
-      <section>
-        <div>
-          <section >
-            <div className="item">
-              <ItemmenuE
-                img={agua}
-                gastos='R$ 28493'
-                data='hoje'
-                link="/AparelhoAgua"
-              /></div>
-              <div className="item">
-              <ItemmenuE
-                img={agua}
-                gastos='R$ 28493'
-                data='hoje'
-                link="/AparelhoAgua"
-              /></div>
-              <div className="item">
-              <ItemmenuE
-                img={agua}
-                gastos='R$ 28493'
-                data='hoje'
-                link="/AparelhoAgua"
-              /></div>
-              <div className="item">
-              <ItemmenuE
-                img={agua}
-                gastos='R$ 28493'
-                data='hoje'
-                link="/AparelhoAgua"
-              /></div>
-              <div className="item">
-              <ItemmenuE
-                img={agua}
-                gastos='R$ 28493'
-                data='hoje'
-                link="/AparelhoAgua"
-              /></div>
-          </section>
-        </div>
+  const [AparelhosAgua, setAparelhosAgua] = useState([])
+  const [nome, setName] = useState("")
+  const [vazao, setVazao] = useState("")
+  const [tempuso, setTempuso] = useState("")
+  const aparelhoAgua = {
+      "nome": "",
+      "vazao": 0,
+      "tempouso": null
+  }
+  useEffect(() => {
 
-        <Link to="/AparelhoAgua"><div id="sNovo"><img src={novo} alt="novo" className='novo' /></div></Link>
-      </section>
-    </main>
+    fetch("http://localhost:8090/enderecos/aparelhos/agua/listar", {//metodo get
+        method: "get",
+        headers: {
+            "Content-type": "application/json",
+            "Accept": "application/json"
+        }
+
+    })
+
+        .then((res) => res.json())
+        .then((data) => {
+          
+            setAparelhosAgua(data)
+        })
+        .catch((err) => alert(err))
+
+}, [])
+
+  return (
+    <div>
+    <AguaMap vetor={AparelhosAgua} /> 
+ </div>
   )
 }
-
 export default Agua

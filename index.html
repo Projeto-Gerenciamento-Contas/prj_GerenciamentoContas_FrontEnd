@@ -20,19 +20,19 @@
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
   
-<script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
-<script>
-// optional init
-  window.onload = function() {
-    window.micAccessTool = new MicAccessTool({
-      link: 'http://your-awesome-website.com/your-accessibility-declaration.pdf',
-      contact: 'mailto:your-mail@your-awesome-website.com',
-      buttonPosition: 'right', // default is 'left'
-      forceLang: 'pt-br' // default is 'en' may be 'he-IL', 'ru-RU', or 'fr_FR'
-    });
-  }
-</script>
-
+  <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+  <script>
+  // optional init
+    window.onload = function() {
+      window.micAccessTool = new MicAccessTool({
+        link: 'http://your-awesome-website.com/your-accessibility-declaration.pdf',
+        contact: 'mailto:your-mail@your-awesome-website.com',
+        buttonPosition: 'left', // default is 'left'
+        forceLang: 'pt-br' // default is 'en' may be 'he-IL', 'ru-RU', or 'fr_FR'
+      });
+    }
+  </script>
+  
   <script
   src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js"
   crossorigin></script>
