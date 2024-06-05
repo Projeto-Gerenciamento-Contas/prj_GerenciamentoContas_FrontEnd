@@ -24,7 +24,7 @@ import Aparelhogas from './pages/Aparelhos/Aparelhogas'
 import ItemCompras from './pages/Aparelhos/ItemCompras'
 import ItemOutros from './pages/Aparelhos/ItemOutros'
 //import './Contraste.css'
-import Aside from './components/Aside/Aside'
+
 
 function App() {
 
@@ -59,6 +59,7 @@ function App() {
           <Route path='/AparelhoAgua' element={<AparelhoAgua />} />
           <Route path='/Aparelhogas' element={<Aparelhogas />} />
           <Route path='/ItemCompras' element={<ItemCompras />} />
+          <Route path='/ItemOutros' element={<ItemOutros />} />
         </Routes>
         <Footer /> 
             

@@ -1,26 +1,26 @@
 import React from 'react'
 
-
 const Api = () => {
     let url ="http://localhost:8090"
+    useEffect(() => {
 
-    function listar(){
-        fetch("http://localhost:8090/usuario/enderecos/listar",{//metodo get
-        method:"get",
-        headers:{
-            "Content-type": "application/json",
-            "Accept":"application/json"
-        }
+        fetch(url+"/enderecos/aparelhos/agua/listar", {//metodo get
+            method: "get",
+            headers: {
+                "Content-type": "application/json",
+                "Accept": "application/json"
+            }
 
         })
-        
-        .then((res) => res.json())
-        .then((data) => {
-           let body = JSON.stringify(data)
-            document.write(body)
-        })
-        .catch((err)=>alert(err))
-   }
+
+            .then((res) => res.json())
+            .then((data) => {
+                let body = JSON.stringify(data)
+                setAparelhosAgua(body)
+            })
+            .catch((err) => alert(err))
+
+    }, [])
     }
 
     function cadastro(){
